@@ -1,14 +1,23 @@
 import './App.css'
 import { useNavigate } from 'react-router'
+import { useCounter } from './context/CounterContext'
 
 function App() {
   const navigate = useNavigate()
+  const { counter, increment, decrement } = useCounter()
 
   return (
     <main className="min-h-screen px-6 py-12 text-stone-900">
       <div className="mx-auto flex max-w-4xl flex-col gap-8">
         <span className="badge">Shuru Theme</span>
         <h1 className="display">Hello world</h1>
+
+        <div className="flex items-center gap-4">
+          <button type="button" className="btn-outline" onClick={decrement}>-</button>
+          <div className="text-2xl font-medium">Counter: {counter}</div>
+          <button type="button" className="btn-outline" onClick={increment}>+</button>
+        </div>
+
         <p className="body-text max-w-2xl text-stone-700">
           This project now uses the Shuru global theme, the Playwrite GB J font loaded from <code>src/assets/font/Playwrite_GB_J</code>, and shared component styles.
         </p>
