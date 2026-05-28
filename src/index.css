@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Playwrite GB J";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./assets/font/Playwrite_GB_J/PlaywriteGBJ-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Playwrite GB J";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./assets/font/Playwrite_GB_J/PlaywriteGBJ-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  color-scheme: light;
+  font-family: "Playwrite GB J", Inter, ui-sans-serif, system-ui, sans-serif;
+  --shuru-bg: #fff7f0;
+  --shuru-surface: #ffffff;
+  --shuru-border: #ffb38a;
+  --shuru-primary: #cc5500;
+  --shuru-on-primary: #ffffff;
+  --shuru-muted: #7a3000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #fff5ed 0%, #fffaf5 35%, #fff7f0 100%);
+  color: #311f00;
+  font-family: "Playwrite GB J", Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #521f00;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full border-2 px-5 py-3 font-semibold transition hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-300;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full border-2 px-5 py-3 font-semibold transition hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-300 bg-orange-500 text-white border-orange-600 hover:bg-orange-600;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-full border-2 px-5 py-3 font-semibold transition hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-300 border-orange-500 text-orange-700 bg-transparent hover:bg-orange-50;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center rounded-full border-2 px-5 py-3 font-semibold transition hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-300 text-orange-700 bg-transparent border-transparent hover:bg-orange-50;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-sm font-medium text-orange-700;
+}
+
+.callout {
+  @apply rounded-2xl border-l-4 border-orange-600 bg-orange-50 p-5 text-orange-900 shadow-sm;
+}
+
+.display {
+  @apply text-[3rem] font-extrabold tracking-tight;
+}
+
+.heading-1 {
+  @apply text-3xl font-bold;
+}
+
+.heading-2 {
+  @apply text-2xl font-semibold;
+}
+
+.heading-3 {
+  @apply text-xl font-semibold;
+}
+
+.body-text {
+  @apply text-base font-normal leading-8;
+}
+
+.small-text {
+  @apply text-sm font-normal tracking-normal text-stone-600;
+}
+
+.label-overline {
+  @apply text-xs font-medium tracking-wide uppercase text-stone-600;
+}
